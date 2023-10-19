@@ -1,0 +1,154 @@
+main {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+}
+
+.container {
+  border-radius: 15px;
+  margin: 0;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  padding: 0;
+  height: 80vh;
+  width: 400px;
+  overflow: hidden;
+}
+
+#header {
+  background-color: #ff8ba7;
+  color: white;
+}
+
+h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 20px 0 20px 0;
+  text-align: center;
+}
+
+#content-body {
+  background-color: #fce4ec;
+  display: grid;
+  grid-template-rows: 60px 400px;
+  padding: 0;
+  padding-bottom: 10px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 320px 45px;
+  column-gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.task-input {
+  background-color: #ddead1;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  width: 320px;
+  height: 40px;
+  border-radius: 8px;
+  outline: none;
+  border: 2px solid #c4c4c4;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 15px 0 20px 0;
+}
+
+input:focus {
+  border: 2px solid #ff8ba7;
+}
+
+::placeholder {
+  font-size: medium;
+  text-align: center;
+}
+
+#button {
+  width: 45px;
+  height: 40px;
+  background-color: #ff8ba7;
+  border: 2px solid #ff8ba7;
+  border-radius: 8px;
+  margin: 15px 0 20px 0;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.1s ease;
+}
+
+.notepad {
+  font-family: 'Gochi Hand', cursive;
+  font-size: 1.5rem;
+  max-height: 400px;
+  max-width: 400px;
+  padding: 0 10px 10px 10px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ff8ba7 #fff;
+}
+
+.list-item {
+  color: #333;
+  display: flex;
+  flex-direction: row;
+  background-color: #c3f0ca;
+  border: 2px #fff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  overflow-x: hidden;
+}
+
+.completed {
+  color: #b1b1b1;
+  text-decoration: line-through;
+}
+
+.list-item > p {
+  font-size: large;
+  margin: 0;
+  padding: 20px;
+}
+
+footer {
+  color: #ef3167;
+  text-align: center;
+  padding: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff8ba7;
+  border-radius: 5px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ec407a; 
+}
+
+@media only screen and (max-width: 450px) {
+  .container {
+    width: 280px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  form {
+    grid-template-columns: 200px 28px;
+  }
+
+  .task-input {
+    width: 200px;
+  }
+}

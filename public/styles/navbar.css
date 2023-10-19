@@ -1,0 +1,44 @@
+body {
+    background-color: #faeee7;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Caveat', cursive;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    display: flex;
+    font-size: 18px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.calendar-img {
+    width: 30px;
+    height: 20px;
+}
+
+.work-img {
+    width: 30px;
+    height: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ef3167;
+    font-weight: lighter;
+}
