@@ -25,6 +25,7 @@ const data = {
 const tTasks = [];
 const wTasks = [];
 
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static("public"));
@@ -32,7 +33,7 @@ app.use(express.static("public"));
 app.get("/", (req, res) => {
     res.render("index.ejs", { 
         data: data,
-        tTaskList: tTasks 
+        tTaskList: tTasks
     });
 });
 
@@ -40,18 +41,17 @@ app.get("/work", (req, res) => {
     res.render("work.ejs", { wTaskList: wTasks });
 });
 
-app.post("/", (req, res) => {
-    tTasks.push(req.body["tTask"]);
-    res.render("index.ejs", {
-        data: data, 
-        tTaskList: tTasks
-    });
-})
-
-app.post("/work", (req, res) => {
-    wTasks.push(req.body["wTask"]);
-    res.render("work.ejs", { wTaskList: wTasks })
-})
+app.post("/task", (req, res, next) => {
+    if ( req.body["tTask"]) {
+        tTasks.push(req.body["tTask"]);
+        res.redirect("/");
+        next();
+    } else {
+        wTasks.push(req.body["wTask"]);
+        res.redirect("/work");
+        next();
+    }
+});
 
 app.listen(process.env.PORT || port, () => {
     console.log(`Server is running on port ${port}`);

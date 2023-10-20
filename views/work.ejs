@@ -5,7 +5,7 @@
                 <h1>Work List</h1>
             </div>
             <div id="content-body">
-                <form action="/work" method="post">
+                <form action="/task" method="post">
                     <input type="text" name="wTask" placeholder="New Task" class="task-input" required>
                     <input type="submit" value="+" id="button">
                 </form>
@@ -13,7 +13,8 @@
                     <% if (locals.wTaskList) { %>
                         <% for( let index = wTaskList.length - 1; index !== -1; index-- ) { %>
                             <div class="list-item">
-                                <input type="checkbox" name="checkbox"> <p><%= wTaskList[index] %></p>
+                                <input type="checkbox" name="checkbox"> 
+                                <p><%= wTaskList[index] %></p>
                             </div>
                         <% } %>
                     <% } %>

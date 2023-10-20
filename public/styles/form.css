@@ -10,7 +10,6 @@ main {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
   padding: 0;
-  height: 80vh;
   width: 400px;
   overflow: hidden;
 }
@@ -39,7 +38,7 @@ h1 {
 form {
   display: grid;
   grid-template-columns: 320px 45px;
-  column-gap: 10px;
+  column-gap: 12px;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -48,7 +47,7 @@ form {
   background-color: #ddead1;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
-  width: 320px;
+  width: 322px;
   height: 40px;
   border-radius: 8px;
   outline: none;
@@ -117,8 +116,8 @@ footer {
   color: #ef3167;
   text-align: center;
   padding: 0;
-  position: fixed;
   bottom: 0;
+  margin-top: 30px;
   width: 100%;
 }
 
@@ -136,6 +135,10 @@ footer {
 }
 
 @media only screen and (max-width: 450px) {
+  body {
+    background-image: url(/images/Untitled\ design\ \(7\).png);;
+  }
+
   .container {
     width: 280px;
   }
